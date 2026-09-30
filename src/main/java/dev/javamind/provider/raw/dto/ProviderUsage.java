@@ -1,0 +1,11 @@
+package dev.javamind.provider.raw.dto;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record ProviderUsage(
+        @JsonProperty("prompt_tokens") Integer promptTokens,
+        @JsonProperty("completion_tokens") Integer completionTokens,
+        @JsonProperty("total_tokens") Integer totalTokens) {
+}
